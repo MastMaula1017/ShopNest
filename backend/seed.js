@@ -15,7 +15,7 @@ const importData = async () => {
     await Product.deleteMany();
 
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash('password123', salt);
+    const hashedPassword = await bcrypt.hash('123', salt);
     
     const adminUser = await User.create({
       name: 'Admin User',
